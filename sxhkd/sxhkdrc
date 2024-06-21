@@ -1,0 +1,225 @@
+#
+# wm independent hotkeys
+#
+
+super + z
+    ((ls ~/Pictures/Wallpapers | grep -f ~/.wall0 -A1 | (cat ; (ls ~/Pictures/Wallpapers | head -n 1)) | (sed '2q;d' > ~/.wall1)) && mv ~/.wall1 ~/.wall0 && feh --bg-scale ~/Pictures/Wallpapers/$(cat ~/.wall0)) || (ls ~/Pictures/Wallpapers | head -n 1 > ~/.wall0)
+
+# terminal emulator
+super + Return
+	alacritty
+
+# program launcher
+super + {_,alt + }@space
+	rofi -m -1 -show {drun,run}
+
+# # emojis
+# super + semicolon
+#     rofimoji --selector-args="-m -1" --action clipboard --max-recent 0 --prompt " 󰞅  Emojis "
+# 
+# super + backslash
+#     rofimoji --selector-args="-m -1" --action clipboard --max-recent 0 --prompt " 󰿉  Math Symbols " --files \\
+#     math \\
+#     mathematical_alphanumeric_symbols \\
+#     mathematical_operators \\
+#     miscellaneous_mathematical_symbols-a \\
+#     miscellaneous_mathematical_symbols-b \\
+#     number_forms \\
+#     superscripts_and_subscripts \\
+#     supplemental_arrows-a \\
+#     supplemental_arrows-b \\
+#     supplemental_arrows-c \\
+#     supplemental_mathematical_operators
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# Open system monitor TUI
+ctrl + shift + Escape
+    alacritty --class abtop -e btop
+
+# Open File explorer TUI
+super + e
+    nautilus
+    # alacritty -e lf
+
+#
+# bspwm hotkeys
+#
+
+# quit/restart bspwm
+super + alt + {q,r}
+	bspc {quit, wm -r}
+
+# close and kill
+super + {_,shift + }w
+	bspc node -{c,k}
+
+# alternate between the tiled and monocle layout
+super + m
+	bspc desktop -l next
+
+# send the newest marked node to the newest preselected node
+super + y
+    bspc node newest.marked.local -n newest.!automatic.local
+
+# swap the current node and the biggest window
+super + g
+	bspc node -s biggest.window
+
+# Rotate tree
+super + shift + {d,a}
+    bspc node @/ -C {forward,backward}
+
+# rotate the node in the given direction
+super + {a,d}
+    bspc node -R {270,90} || bspc node @parent -R {270,90}
+    
+
+#
+# state/flags
+#
+
+# set the window state
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# set the node flags
+super + ctrl + {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
+
+#
+# focus/swap
+#
+
+# focus the node in the given direction
+super + {h,j,k,l}
+	bspc node -f {west,south,north,east}
+
+super + shift + {h,j,k,l}
+	bspc node -s {west,south,north,east} --follow
+
+# focus the node for the given path jump
+super + {p,b,comma,period}
+	bspc node -f @{parent,brother,first,second}
+
+# focus the next/previous window in the current desktop
+super + {_,shift + }c
+	bspc node -f {next,prev}.local.!hidden.window
+
+# focus the next/previous desktop in the current monitor
+super + bracket{left,right}
+	bspc desktop -f {prev,next}.local
+
+# focus the last node/desktop
+super + {grave,Tab}
+	bspc {node,desktop} -f last
+
+# focus the older or newer node in the focus history
+super + {o,i}
+	bspc wm -h off; \
+	bspc node {older,newer} -f; \
+	bspc wm -h on
+
+# focus or send to the given desktop
+super + {1,2,3,4,5,6,7,8,9,0}
+    ~/.scripts/bspSwitchDesktop.sh {1,2,3,4,5,6,7,8,9,0}
+
+super + shift + {1,2,3,4,5,6,7,8,9,0}
+    ~/.scripts/bspSendToDesktop.sh {1,2,3,4,5,6,7,8,9,0}
+
+# Focus previous/next monitor
+super + {minus, equal}
+    bspc monitor -f {prev,next}
+
+# Send to previous/next monitor
+super + shift + {minus, equal}
+    bspc node -m {prev,next} --follow
+
+#
+# preselect
+#
+
+# preselect the direction
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# preselect the ratio
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# cancel the preselection for the focused node
+super + ctrl + space
+	bspc node -p cancel
+
+# cancel the preselection for the focused desktop
+super + ctrl + shift + space
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+super + {_,shift + } q
+    bspc node @/ {--balance,--equalize}
+
+#
+# move/resize
+#
+
+# expand a window by moving one of its side outward
+super + alt + {h,j,k,l}
+    STEP=20; SELECTION={1,2,3,4}; \
+    bspc node -z $(echo "left -$STEP 0,bottom 0 $STEP,top 0 -$STEP,right $STEP 0" | cut -d',' -f$SELECTION) || \
+    bspc node -z $(echo "right -$STEP 0,top 0 $STEP,bottom 0 -$STEP,left $STEP 0" | cut -d',' -f$SELECTION)
+
+# contract a window by moving one of its side inward
+super + alt + shift + {h,j,k,l}
+    STEP=20; SELECTION={1,2,3,4}; \
+    bspc node -z $(echo "right -$STEP 0,top 0 $STEP,bottom 0 -$STEP,left $STEP 0" | cut -d',' -f$SELECTION) || \
+    bspc node -z $(echo "left -$STEP 0,bottom 0 $STEP,top 0 -$STEP,right $STEP 0" | cut -d',' -f$SELECTION)
+
+# move a floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+#
+# Brightness and Volume control
+#
+XF86MonBrightness{Up,Down}
+    brightnessctl s 1500{+,-}
+
+XF86AudioRaiseVolume
+    wpctl set-volume @DEFAULT_SINK@ 5%+
+
+XF86AudioLowerVolume
+    wpctl set-volume @DEFAULT_SINK@ 5%-
+
+XF86AudioMute
+    wpctl set-mute @DEFAULT_SINK@ toggle
+
+#
+# Media Control
+#
+
+# XF86AudioPlay and stuff perhaps? xmodmap -pke
+
+XF86AudioPlay 
+    playerctl play-pause
+XF86AudioStop 
+    playerctl stop
+XF86AudioNext 
+    playerctl previous
+XF86AudioPrev
+    playerctl next
+
+#
+# Open arandr
+#
+super + F7
+    arandr
+
+# Screenshots
+
+Print
+    scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/Screenshots && mv $f ~/Pictures/Screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/Screenshots/`ls -1 -t ~/Pictures/Screenshots | head -1`'
+
+shift + Print
+    scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/Screenshots && mv $f ~/Pictures/Screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/Screenshots/`ls -1 -t ~/Pictures/Screenshots | head -1`'

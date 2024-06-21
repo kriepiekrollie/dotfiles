@@ -1,0 +1,9 @@
+syntax on
+set relativenumber
+set shiftwidth=4
+set tabstop=4
+set expandtab
+set smartindent
+set cursorline
+set termguicolors
+colorscheme tokyonight
