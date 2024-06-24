@@ -10,3 +10,12 @@
 [submodule "dunst/catppuccin"]
 	path = dunst/catppuccin
 	url = https://github.com/catppuccin/dunst
+[submodule ".zsh/powerlevel10k"]
+	path = .zsh/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k
+[submodule ".zsh/fzf/fzf"]
+	path = .zsh/fzf/fzf
+	url = https://github.com/junegunn/fzf
+[submodule ".zsh/fzf/fzf-tab"]
+	path = .zsh/fzf/fzf-tab
+	url = https://github.com/Aloxaf/fzf-tab
