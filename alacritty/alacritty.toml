@@ -1,7 +1,7 @@
 shell = "/usr/bin/zsh"
 
 import = [
-"~/.config/alacritty/catppuccin.toml",
+"~/.config/alacritty/catppuccin/catppuccin-mocha.toml",
 "~/.config/alacritty/font.toml",
 ]
 
@@ -11,7 +11,7 @@ multiplier = 3
 
 [window]
 dynamic_title = true
-# decorations = "None"
+decorations = "None"
 title = "Terminal"
 resize_increments = true
 

@@ -1,0 +1,22 @@
+#!/bin/bash
+
+class=$1
+echo $1
+
+node=$(xdotool search -class $class)
+if ! [[ $? = 0 ]]; then
+    alacritty --class $class &!
+    exit 0
+fi
+
+tmp=$node
+
+node=$(bspc query -N -n $tmp.!hidden)
+if [[ $? = 0 ]]; then
+    bspc node $node --flag hidden=on
+    exit 0
+fi
+
+node=$(bspc query -N -n $tmp.hidden)
+bspc node $node --flag hidden=off --focus
+

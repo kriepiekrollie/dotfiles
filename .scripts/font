@@ -1,0 +1,49 @@
+#!/bin/bash
+if ! [ $# -eq 1 ]; then
+    echo "\
+Usage: 
+    font <fontname>
+
+Available fonts:
+    - mononoki  (Mononoki)
+    - jetbrains (JetBrainsMono)
+    - fira      (FiraMono)
+    - julia     (JuliaMono)
+"
+    exit 1
+fi
+
+if [ $1 = "mononoki" ]; then
+    alacritty msg config -w -1 'font.normal.family=     "Mononoki Nerd Font"'
+    alacritty msg config -w -1 'font.bold.family=       "Mononoki Nerd Font"'
+    alacritty msg config -w -1 'font.italic.family=     "Mononoki Nerd Font"'
+    alacritty msg config -w -1 'font.bold_italic.family="Mononoki Nerd Font"'
+elif [ $1 = "jetbrains" ]; then
+    alacritty msg config -w -1 'font.normal.family=     "JetBrainsMono Nerd Font"'
+    alacritty msg config -w -1 'font.bold.family=       "JetBrainsMono Nerd Font"'
+    alacritty msg config -w -1 'font.italic.family=     "JetBrainsMono Nerd Font"'
+    alacritty msg config -w -1 'font.bold_italic.family="JetBrainsMono Nerd Font"'
+elif [ $1 = "fira" ]; then
+    alacritty msg config -w -1 'font.normal.family=     "FiraMono Nerd Font"'
+    alacritty msg config -w -1 'font.bold.family=       "FiraMono Nerd Font"'
+    alacritty msg config -w -1 'font.italic.family=     "FiraMono Nerd Font"'
+    alacritty msg config -w -1 'font.bold_italic.family="FiraMono Nerd Font"'
+elif [ $1 = "julia" ]; then
+    alacritty msg config -w -1 'font.normal.family=     "JuliaMono Nerd Font"'
+    alacritty msg config -w -1 'font.bold.family=       "JuliaMono Nerd Font"'
+    alacritty msg config -w -1 'font.italic.family=     "JuliaMono Nerd Font"'
+    alacritty msg config -w -1 'font.bold_italic.family="JuliaMono Nerd Font"'
+else
+    echo "\
+Usage: 
+    font <fontname>
+
+Available fonts:
+    - mononoki
+    - jetbrains
+    - firacode
+    - julia
+"
+fi
+exit 0
+

@@ -35,10 +35,10 @@ zstyle ':fzf-tab:*' switch-group '<' '>'
 
 # https://github.com/catppuccin/zsh-syntax-highlighting
 # must be before zsh-syntax-highlighting.
-source $ZSH_DIR/zsh-syntax-highlighting/catppuccin/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
+# source $ZSH_DIR/zsh-syntax-highlighting/catppuccin/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
 
 # https://github.com/zsh-users/zsh-syntax-highlighting
-source $ZSH_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source $ZSH_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # --- powerlevel10k --- #
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

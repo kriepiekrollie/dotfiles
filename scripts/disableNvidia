@@ -1,2 +1,0 @@
-#!/bin/sh
-sudo grubby --update-kernel=ALL --remove-args='nvidia-drm.modeset=1'
