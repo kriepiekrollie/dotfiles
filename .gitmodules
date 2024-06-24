@@ -1,3 +1,12 @@
 [submodule ".vim/autoload"]
 	path = .vim/autoload
 	url = https://github.com/junegunn/vim-plug
+[submodule "alacritty/catppuccin"]
+	path = alacritty/catppuccin
+	url = https://github.com/catppuccin/alacritty
+[submodule "bat/themes/catppuccin"]
+	path = bat/themes/catppuccin
+	url = https://github.com/catppuccin/bat
+[submodule "dunst/catppuccin"]
+	path = dunst/catppuccin
+	url = https://github.com/catppuccin/dunst
