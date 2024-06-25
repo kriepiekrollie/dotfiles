@@ -1,15 +1,20 @@
 #!/bin/sh
 
+# --- Setup --- #
+
 /usr/libexec/polkit-gnome-authentication-agent-1 &
-picom &
+picom & 
 dunst &
 polybar minimal &
+feh --bg-fill --randomize ~/Pictures/Wallpapers/* &
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 xinput --set-prop "ELAN061B:00 04F3:309E Touchpad" "libinput Tapping Enabled" 1
 xsetroot -cursor_name left_ptr
 
 bspc monitor -d I II III IV V VI VII VIII IX X
+
+# --- Configuration --- #
 
 bspc config remove_disabled_monitors true
 bspc config remove_unplugged_monitors true
@@ -29,11 +34,8 @@ bspc config split_ratio          0.50
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a Chromium desktop='^2'
-bspc rule -a mplayer2 state=floating
-bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off
+# --- Window Rules --- #
+
 bspc rule -a abtop state=floating rectangle=1536x864+192+108
 bspc rule -a arandr state=floating rectangle=1536x864+192+108
 
@@ -41,5 +43,3 @@ bspc rule -a bspScratchTerm1 state=floating sticky=on layer=above rectangle=640x
 bspc rule -a bspScratchTerm2 state=floating sticky=on layer=above rectangle=640x360+7+7
 bspc rule -a bspScratchTerm3 state=floating sticky=on layer=above rectangle=640x360+1273+689
 bspc rule -a bspScratchTerm4 state=floating sticky=on layer=above rectangle=640x360+1273+7
-
-bspc rule -a alacrittyDaddy hidden=on
