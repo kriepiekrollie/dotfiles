@@ -35,21 +35,27 @@ create_symlink() {
 
     echo -e "\e[36;1;4m$1\e[0m"
 
-    if [ -L "$link_name" ]; then
-        current_target=$(readlink "$link_name")
-        if [ "$current_target" == "$target" ]; then
-            echo -e "\e[32;1mSymlink already exists.\e[0m\n"
-            return 0
+    if [ -e "$link_name" ]; then
+        if [ -L "$link_name" ]; then
+            current_target=$(readlink "$link_name")
+            if [ "$current_target" == "$target" ]; then
+                echo -e "\e[32;1mSymbolic link already exists.\e[0m\n"
+                return 0
+            fi
         fi
+        echo -e "\e[33;1mFailed to create symbolic link: File exists\e[0m\n"
+        echo -e "┌─$link_name"
+        echo -e "└>$target"
+        return 0
     fi
 
-    echo -e "Creating symlink:"
+    echo -e "Creating symbolic link:"
     echo -e "┌─$link_name"
-    echo -e "└>$target"
+    echo -e "└>$target\e[31;1m"
 
     ln -s "$target" "$link_name"
     if [ $? -eq 0 ]; then
-        echo -e "\e[32mSymlink created successfully.\e[0m\n"
+        echo -e "\e[32mSymbolic link created successfully.\e[0m\n"
         return 0
     else
         echo -e "\e[0m\n"

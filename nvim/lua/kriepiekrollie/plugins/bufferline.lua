@@ -19,9 +19,7 @@ return {
       separator_style = "thin",
       numbers = "ordinal",
 
-      -- indicator = {
-      --   style = 'underline',
-      -- },
+      buffer_close_icon = '',
 
       offsets = {
         {

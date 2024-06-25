@@ -50,7 +50,7 @@ ctrl + shift + Escape
 
 # Open File explorer
 super + e
-    nautilus
+    thunar
 
 #
 # bspwm hotkeys
