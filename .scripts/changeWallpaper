@@ -1,0 +1,1 @@
+((ls ~/Pictures/Wallpapers | grep -f ~/.wall0 -A1 | (cat ; (ls ~/Pictures/Wallpapers | head -n 1)) | (sed '2q;d' > ~/.wall1)) && mv ~/.wall1 ~/.wall0 && feh --bg-scale ~/Pictures/Wallpapers/$(cat ~/.wall0)) || (ls ~/Pictures/Wallpapers | head -n 1 > ~/.wall0)
