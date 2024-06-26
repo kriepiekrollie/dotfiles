@@ -9,6 +9,17 @@ export EDITOR=vim
 export VISUAL=nvim
 export BROWSER=firefox
 
+export GTK_THEME="catppuccin-mocha-mauve-standard+default"
+export WINIT_X11_SCALE_FACTOR="1"
+
+if [ -d "$SCRIPTS" ] ; then
+    PATH="$SCRIPTS:$PATH"
+fi
+
 if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$SCRIPTS:$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+if [ -d "$HOME/.cargo/bin" ] ; then
+   $PATH="$HOME/.cargo/bin:$PATH"
 fi
