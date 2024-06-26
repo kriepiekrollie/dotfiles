@@ -15,11 +15,6 @@ export P10K_WHITE='#cdd6f4'
 
 export PYTHONSTARTUP=$ZSH_DIR/python_startup.py
 
-export PATH=$PATH:~/.scripts
-export PATH=$PATH:~/.cargo/bin
-
-export EDITOR=nvim
-
 # nmtui lmao
 export NEWT_COLORS='root=black,black
     title=white,black
