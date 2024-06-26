@@ -5,13 +5,18 @@ bindkey "^H" backward-delete-char
 bindkey "^?" backward-delete-char
 
 if ! [[ -n $DISPLAY ]]; then
-    PROMPT=$'%n@%m:%d%{\e[0m%} '
+    PROMPT=$'%n@%m:%d%{\e[0m%} > '
 else
 
 # --- Powerlevel10k instant prompt --- # 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
+# --- Powerlevel10k --- # 
+source $ZSH_DIR/powerlevel10k/powerlevel10k.zsh-theme
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # --- ZSH settings --- #
 HISTFILE=~/.zsh_history
