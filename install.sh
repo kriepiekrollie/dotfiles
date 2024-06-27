@@ -72,7 +72,6 @@ config_dir_stuff=(
     "nvim"
     "picom"
     "polybar"
-    "qt5ct"
     "rofi"
     "sioyek"
     "sxhkd"
@@ -88,6 +87,8 @@ home_dir_stuff=(
     ".zsh"
     ".zshenv"
     ".zshrc"
+    ".zprofile"
+    ".bash_profile"
 )
 
 for thing in ${config_dir_stuff[@]}; do
