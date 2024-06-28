@@ -110,13 +110,6 @@ My config expects these packages:
 - [ttf-jetbrains-mono-nerd](https://archlinux.org/packages/extra/any/ttf-jetbrains-mono-nerd/)
 - [ttf-mononoki-nerd](https://archlinux.org/packages/extra/any/ttf-mononoki-nerd/)
 
-## shell stuff
-- [zsh](https://www.zsh.org/)
-- [fzf](https://github.com/junegunn/fzf)
-- [powerlevel10k](https://github.com/romkatv/powerlevel10k)
-- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-- [inputrc](https://www.gnu.org/software/bash/manual/html_node/Readline-Init-File.html)
-
 # Apps
 Here are some apps I like to have:
 - [alacritty](https://archlinux.org/packages/extra/x86_64/alacritty/)
