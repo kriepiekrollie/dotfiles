@@ -74,6 +74,12 @@ Enable `cups.service`.
 - cups
 - cups-pdf
 
+## User directories
+
+Enable `xdg-user-dirs-update.service`.
+
+- xdg-user-dirs
+
 # Window Manager
 
 ## bspwm
@@ -97,7 +103,6 @@ My config expects these packages:
 - [feh](https://archlinux.org/packages/extra/x86_64/feh/)
 - [brightnessctl](https://archlinux.org/packages/extra/x86_64/brightnessctl/)
 - [polkit-gnome](https://archlinux.org/packages/extra/x86_64/polkit-gnome/)
-- xdg-user-dirs
 - gvfs
 
 ## Fonts
@@ -123,6 +128,10 @@ Here are some apps I like to have:
 - blueman
 - [sioyek](https://aur.archlinux.org/packages/sioyek) (AUR)
 - [qdirstat](https://aur.archlinux.org/packages/qdirstat-bin) (AUR)
+
+## Latex
+This is very big.
+- [texlive](https://archlinux.org/groups/x86_64/texlive/)
 
 # Command-line tools
 ## Shell things
