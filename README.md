@@ -1,6 +1,6 @@
 # my dotfiles
 
-I'm running [Fedora Workstation Edition](https://fedoraproject.org/workstation/) with [bspwm](https://github.com/baskerville/bspwm).
+I'm running [bspwm](https://github.com/baskerville/bspwm).
 
 ## window manager stuff
 - [bspwm](https://github.com/baskerville/bspwm)
@@ -23,3 +23,21 @@ I'm running [Fedora Workstation Edition](https://fedoraproject.org/workstation/)
 - [bat](https://github.com/sharkdp/bat)
 - [btop++](https://github.com/aristocratos/btop)
 - [sioyek](https://github.com/ahrm/sioyek)
+
+# Theming
+Theming is hell and i hate both gtk and qt
+
+## GTK
+
+install gnome-tweaks, and run the install script from [catppuccin](https://github.com/catppuccin/gtk/blob/main/docs/USAGE.md). 
+
+## QT
+
+install kvantum, and install [the catppuccin theme](https://github.com/catppuccin/Kvantum).
+
+## icon theme
+i was only able to get [catppuccin folders] to work after installing lxappearance.
+
+## Firefox
+
+[catppuccin](https://addons.mozilla.org/en-US/firefox/addon/catppuccin-mocha-mauve-git/)
