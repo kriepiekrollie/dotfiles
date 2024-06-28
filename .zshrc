@@ -45,6 +45,6 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c"
 
 # --- zoxide --- #
-eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 
 fi
