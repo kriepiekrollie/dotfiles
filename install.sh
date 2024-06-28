@@ -74,6 +74,7 @@ config_dir_stuff=(
     "polybar"
     "rofi"
     "sioyek"
+    "systemd"
     "sxhkd"
 )
 
