@@ -8,9 +8,6 @@ systemctl --user start polybar.service
 feh --bg-fill --randomize ~/Pictures/Wallpapers/* &
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-xinput --set-prop "ELAN061B:00 04F3:309E Touchpad" "libinput Tapping Enabled" 1
-xsetroot -cursor_name left_ptr
-
 bspc monitor -d I II III IV V VI VII VIII IX X
 
 # --- Configuration --- #
