@@ -1,5 +1,3 @@
-sudo
-
 # my dotfiles
 
 I'm using Arch, btw.
@@ -10,6 +8,13 @@ To easily clone these dotfiles, use [GNU](https://www.gnu.org/software/stow/)[ s
 gh repo clone kriepiekrollie/dotfiles -- --recurse-submodules
 cd dotfiles
 stow .
+```
+
+# Reminder
+
+To list all installed packages with pacman, run
+```
+pacman -Qe
 ```
 
 # Device setup
