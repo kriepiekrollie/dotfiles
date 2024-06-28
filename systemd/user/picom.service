@@ -6,11 +6,11 @@ After=dbus.service graphical-session.target xorg.target
 Type=simple
 Environment=DISPLAY=:0
 Environment=XAUTHORITY="/home/benjamin/.Xauthority"
-ExecStart=/usr/bin/picom --dbus --log-level ERROR --log-file /home/benjamin/log.txt
+ExecStart=/usr/bin/picom --dbus
 ExecReload=/usr/bin/kill -SIGUSR1 $MAINPID
 ExecStop=/usr/bin/kill -int $MAINPID
 StandardOutput=journal
 StandardError=journal
 
 [Install]
-WantedBy=desktop.target
+WantedBy=display.target

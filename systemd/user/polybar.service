@@ -1,0 +1,14 @@
+[Unit]
+Description=Polybar status bar for user benjamin
+After=xorg.target
+
+[Service]
+Type=forking
+Environment=DISPLAY=:0
+Environment=XAUTHORITY="/home/benjamin/.Xauthority"
+ExecStart=/home/benjamin/.config/polybar/launch.sh
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=xorg.target

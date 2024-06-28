@@ -3,9 +3,8 @@
 # --- Setup --- #
 
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-picom & 
-dunst &
-polybar minimal &
+systemctl --user start picom.service
+systemctl --user start polybar.service
 feh --bg-fill --randomize ~/Pictures/Wallpapers/* &
 pgrep -x sxhkd > /dev/null || sxhkd &
 
