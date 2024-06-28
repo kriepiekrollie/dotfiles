@@ -4,6 +4,11 @@ bindkey "^[[3~" delete-char
 bindkey "^H" backward-delete-char
 bindkey "^?" backward-delete-char
 
+# --- ls alias --- #
+alias l='ls -lF'
+alias ll='ls -alF'
+command -v eza &> /dev/null 2>&1 && alias ls=eza && alias tree='eza --tree'
+
 if ! [[ -n $DISPLAY ]]; then
     PROMPT=$'%n@%m:%d%{\e[0m%} > '
 else
