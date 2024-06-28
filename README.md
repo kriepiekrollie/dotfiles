@@ -109,6 +109,7 @@ My config expects these packages:
 - [ttf-firacode-nerd](https://archlinux.org/packages/extra/any/ttf-firacode-nerd/)
 - [ttf-jetbrains-mono-nerd](https://archlinux.org/packages/extra/any/ttf-jetbrains-mono-nerd/)
 - [ttf-mononoki-nerd](https://archlinux.org/packages/extra/any/ttf-mononoki-nerd/)
+- [juliamono-nerd-font](https://github.com/mietzen/juliamono-nerd-font) (github)
 
 # Apps
 Here are some apps I like to have:
