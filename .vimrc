@@ -9,7 +9,6 @@ set cindent
 set cursorline
 set termguicolors
 set colorcolumn=80
-syntax on
 
 call plug#begin()
 Plug 'itchyny/lightline.vim'
