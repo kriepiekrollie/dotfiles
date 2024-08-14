@@ -39,3 +39,5 @@ export NEWT_COLORS='root=black,black
     fullscale=,blue
     emptyscale=,red
 '
+
+export PATH="$PATH:$HOME/Code/Projects/cf-tool/target/debug"

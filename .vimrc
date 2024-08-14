@@ -1,5 +1,6 @@
 syntax on
 set encoding=utf-8
+set number
 set relativenumber
 set nowrap
 set shiftwidth=4
@@ -21,5 +22,3 @@ let g:lightline = {'colorscheme': 'catppuccin_mocha'}
 colorscheme catppuccin_mocha
 
 finish
-
-echomsg "Welcome back ❤︎"
