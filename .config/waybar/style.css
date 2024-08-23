@@ -63,15 +63,15 @@ window#waybar.chromium {
 button {
     /* Avoid rounded borders under each button name */
     border: none;
-    border-radius: 7px 7px 12px 12px;
-    box-shadow: inset 2px -3px alpha(@crust, 0.2);
+    border-radius: 0px;
+    /* box-shadow: inset 2px -3px alpha(@crust, 0.2); */
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 
 button:hover {
     background: inherit;
-    box-shadow: inset 2px -3px alpha(@crust, 0.5);
+    /* box-shadow: inset 2px -3px alpha(@crust, 0.5); */
 }
 
 #workspaces button {
@@ -100,28 +100,11 @@ button:hover {
 #pulseaudio,
 #tray {
     padding: 0 10px;
-    border-radius: 7px 7px 12px 12px;
-    box-shadow: inset 2px -3px alpha(@crust, 0.2);
+    border-radius: 0px;
+    /* border-radius: 7px 7px 12px 12px; */
+    /* box-shadow: inset 2px -3px alpha(@crust, 0.2); */
     background-color: transparent;
     color: @text;
-}
-#window,
-#workspaces {
-    margin: 0 4px;
-}
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
-}
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
-}
-#clock {
-}
-#battery {
-}
-#battery.charging, #battery.plugged {
 }
 @keyframes blink {
     to {
