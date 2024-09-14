@@ -1,6 +1,6 @@
 show=drun
-width=750
-height=400
+width=960
+height=540
 always_parse_args=true
 show_all=false
 term=kitty
@@ -9,3 +9,9 @@ print_command=true
 insensitive=true
 prompt=
 columns=2
+
+key_up=Ctrl-k
+key_down=Ctrl-j
+key_left=Ctrl-h
+key_right=Ctrl-l
+key_expand=Ctrl-i

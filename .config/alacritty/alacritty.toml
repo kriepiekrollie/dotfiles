@@ -2,7 +2,6 @@ shell = "/usr/bin/zsh"
 
 import = [
 "~/.config/alacritty/catppuccin/catppuccin-mocha.toml",
-"~/.config/alacritty/font.toml",
 ]
 
 [env]
@@ -25,6 +24,23 @@ instance = "Alacritty"
 [window.padding]
 x = 10
 y = 10
+
+[font]
+size = 16
+offset.x = 0
+offset.y = 0
+[font.normal]
+style = "Light"
+family = "JuliaMono Nerd Font"
+[font.bold]
+style = "Bold"
+family = "JuliaMono Nerd Font"
+[font.italic]
+style = "MediumItalic"
+family = "JuliaMono Nerd Font"
+[font.bold_italic]
+style = "BoldItalic"
+family = "JuliaMono Nerd Font"
 
 [cursor]
 blink_interval = 500

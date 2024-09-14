@@ -61,9 +61,9 @@ window {
 	margin: 0px;
 	padding: 0px;
 	border: 0.16em solid @mauve;
-	border-radius: 10px;
+	border-radius: 0px;
 	background-color: @base;
-	animation: slideIn 0.2s ease-in-out both;
+	/* animation: slideIn 0.0s ease-in-out both; */
 }
 
 /* Slide In */
@@ -83,7 +83,7 @@ window {
 	padding: 10px;
 	border: none;
 	background-color: @base;
-	animation: fadeIn 0.5s ease-in-out both;
+	/* animation: fadeIn 0.5s ease-in-out both; */
 }
 
 /* Fade In */
@@ -119,10 +119,10 @@ window {
 	margin: 5px 20px;
 	padding: 10px;
 	border: 1px solid @mauve;
-	border-radius: 10px;
+	border-radius: 0px;
 	color: @text;
 	background-color: @crust;
-	animation: fadeIn 0.5s ease-in-out both;
+	/* animation: fadeIn 0.5s ease-in-out both; */
 }
 
 #input image {
@@ -139,7 +139,7 @@ window {
 	margin: 5px;
 	border: none;
 	color: @text;
-	animation: fadeIn 0.5s ease-in-out both;
+	/* animation: fadeIn 0.5s ease-in-out both; */
 }
 
 #entry {
@@ -156,7 +156,7 @@ window {
 	outline: none;
 	background-color: @surface0;
 	border: 1px solid @surface0;
-	border-radius: 10px;
+	border-radius: 0px;
 }
 
 #entry:selected #text {

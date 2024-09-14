@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/benjamin/Code/Projects/saco-editorials/docs/javascripts'
 let g:netrw_dirhist_3='/home/benjamin/Documents/cs/244/simpl/test_cases/input/general_tests'
 let g:netrw_dirhist_2='/home/benjamin/Documents/cs/244/simpl/test_cases/input/basic_without_comment'
 let g:netrw_dirhist_1='/home/benjamin/Documents/nixconfig/modules/games/emulationstation-de'

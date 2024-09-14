@@ -27,3 +27,5 @@ fi
 if [ -d "$HOME/.bun/bin" ] ; then
     PATH="$HOME/.bun/bin:$PATH"
 fi
+
+[ -f "/home/benjamin/.ghcup/env" ] && . "/home/benjamin/.ghcup/env" # ghcup-env
