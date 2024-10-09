@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =4
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/usr/lib/udev/hwdb.d'
+let g:netrw_dirhist_5='/home/benjamin/Documents/cs/244/simpl/codegen_tests/test_cases/input/8_input'
 let g:netrw_dirhist_4='/home/benjamin/Code/Projects/saco-editorials/docs/javascripts'
 let g:netrw_dirhist_3='/home/benjamin/Documents/cs/244/simpl/test_cases/input/general_tests'
 let g:netrw_dirhist_2='/home/benjamin/Documents/cs/244/simpl/test_cases/input/basic_without_comment'

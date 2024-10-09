@@ -41,7 +41,8 @@
         "class<steam>": "󰓓 ",
         "class<discord>": "󰙯 ",
         "class<alacritty>": " ",
-        "class<thunar>": " "
+        "class<thunar>": " ",
+        "class<Spotify>": " "
       },
       "window-rewrite-default": "󰙵 ",
       "format-window-separator": " "
