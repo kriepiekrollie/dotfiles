@@ -25,6 +25,7 @@
       "disable-scroll": "true",
       "all-outputs": "true",
       "warp-on-scroll": "false",
+
       "window-rewrite": {
         "class<firefox>": " ",
         "class<org.pwmt.zathura>": " ",
@@ -40,6 +41,7 @@
         "class<Minecraft Launcher>": "󰍳 ",
         "class<steam>": "󰓓 ",
         "class<discord>": "󰙯 ",
+        "class<vesktop>": "󰙯 ",
         "class<alacritty>": " ",
         "class<thunar>": " ",
         "class<Spotify>": " "
@@ -89,8 +91,8 @@
     "pulseaudio": {
       "scroll-step": 1, // %, can be a float
       "format": "{volume}% {icon} {format_source}",
-      "format-bluetooth": "{volume}% {icon} {format_source}",
-      "format-bluetooth-muted": " {icon} {format_source}",
+      "format-bluetooth": "{volume}% {icon}  {format_source}",
+      "format-bluetooth-muted": " {icon}  {format_source}",
       "format-muted": "󰝟 {format_source}",
       "format-source": "",
       "format-source-muted": "",
