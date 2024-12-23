@@ -1,8 +1,12 @@
-shell = "/usr/bin/zsh"
+
+[general]
 
 import = [
 "~/.config/alacritty/catppuccin/catppuccin-mocha.toml",
 ]
+
+[terminal]
+shell = "/usr/bin/zsh"
 
 [env]
 WINIT_X11_SCALE_FACTOR = "1"

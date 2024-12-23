@@ -61,7 +61,7 @@ window {
 	margin: 0px;
 	padding: 0px;
 	border: 0.16em solid @mauve;
-	border-radius: 0px;
+	border-radius: 10px;
 	background-color: @base;
 	/* animation: slideIn 0.0s ease-in-out both; */
 }
@@ -119,7 +119,7 @@ window {
 	margin: 5px 20px;
 	padding: 10px;
 	border: 1px solid @mauve;
-	border-radius: 0px;
+	border-radius: 10px;
 	color: @text;
 	background-color: @crust;
 	/* animation: fadeIn 0.5s ease-in-out both; */
@@ -156,7 +156,7 @@ window {
 	outline: none;
 	background-color: @surface0;
 	border: 1px solid @surface0;
-	border-radius: 0px;
+	border-radius: 10px;
 }
 
 #entry:selected #text {
