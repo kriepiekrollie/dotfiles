@@ -1,0 +1,17 @@
+show=drun
+width=960
+height=540
+always_parse_args=true
+show_all=false
+term=alacritty
+hide_scroll=true
+print_command=true
+insensitive=true
+prompt=
+columns=2
+
+key_up=Ctrl-k
+key_down=Ctrl-j
+key_left=Ctrl-h
+key_right=Ctrl-l
+key_expand=Ctrl-i
