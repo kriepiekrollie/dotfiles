@@ -2,7 +2,7 @@
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
 
-    // "height": 20, // Waybar height (to be removed for auto height)
+    "height": 40, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
 
     "spacing": 2, // Gaps between modules (4px)
@@ -17,7 +17,6 @@
     ],
     "modules-right": [
         "pulseaudio",
-        "pulseaudio/slider",
         "network",
         "battery",
         "battery#bat2",
@@ -94,10 +93,10 @@
     "pulseaudio": {
       "scroll-step": 1, // %, can be a float
       "max-volume": 150,
-      "format": "{icon} {format_source}",
-      "format-bluetooth": "{icon}  {format_source}",
-      "format-bluetooth-muted": "󰝟 {icon}  {format_source}",
-      "format-muted": "󰝟 {format_source}",
+      "format": "{volume}%  {icon} {format_source}",
+      "format-bluetooth": "{volume}%  {icon}  {format_source}",
+      "format-bluetooth-muted": "(muted)  󰝟 {icon}  {format_source}",
+      "format-muted": "(muted)  󰝟 {format_source}",
       "format-source": "",
       "format-source-muted": "",
       "format-icons": {
@@ -112,10 +111,6 @@
         ]
       },
       "on-click": "pwvucontrol"
-    },
-    "pulseaudio/slider": {
-        "min": 0,
-        "max": 150
     },
     "mpris": {
         "status-icons": {

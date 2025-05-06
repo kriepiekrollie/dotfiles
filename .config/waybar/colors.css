@@ -1,0 +1,23 @@
+/*
+*
+* Base16 Tokyodark
+* Author: Jamy Golden (https://github.com/JamyGolden), Based on Tokyodark.nvim (https://github.com/tiagovla/tokyodark.nvim)
+*
+*/
+
+@define-color base00 #11121d;
+@define-color base01 #212234;
+@define-color base02 #212234;
+@define-color base03 #353945;
+@define-color base04 #4a5057;
+@define-color base05 #a0a8cd;
+@define-color base06 #abb2bf;
+@define-color base07 #bcc2dc;
+@define-color base08 #ee6d85;
+@define-color base09 #f6955b;
+@define-color base0A #d7a65f;
+@define-color base0B #95c561;
+@define-color base0C #9fbbf3;
+@define-color base0D #7199ee;
+@define-color base0E #a485dd;
+@define-color base0F #773440;

@@ -45,6 +45,8 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
 zstyle ':fzf-tab:*' switch-group '<' '>'
 
+source ~/.zsh/fzf_colors.sh
+
 # --- bat for man --- #
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c"
@@ -53,3 +55,10 @@ export MANROFFOPT="-c"
 eval "$(zoxide init --cmd=cd  zsh)"
 
 fi
+
+export TINTED_SHELL_ENABLE_BASE16_VARS=1
+export TINTED_SHELL_ENABLE_BASE24_VARS=1
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/home/benjamin/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

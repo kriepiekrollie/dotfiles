@@ -1,12 +1,12 @@
 return {
 	"nvim-lualine/lualine.nvim",
-	priority = 999,
+	priority = 998,
   dependencies = { "nvim-tree/nvim-web-devicons" },
 
 	config = function()
 		require("lualine").setup({
       options = {
-        theme = "auto", -- require("lualine.themes.catppuccin"),
+        theme = "base16",
         component_separators = {
           left = "│",
           right = "│"

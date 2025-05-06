@@ -18,9 +18,15 @@ vim.opt.backspace = [[indent,eol,start]]
 vim.opt.termguicolors = true
 vim.opt.hidden = true
 
-vim.opt.mouse = ""
+-- vim.opt.mouse = ""
 
 vim.opt.colorcolumn = "80"
+
+vim.opt.backup = true
+vim.opt.backupext=".bak"
+vim.opt.backupdir=vim.env.HOME .. "/.nvim_backups//"
+
+-- vim.cmd('source ' .. vim.fn.stdpath("config") .. '/lua/kriepiekrollie/colors.vim')
 
 vim.g.mapleader = ' '
 local map = vim.keymap.set
@@ -29,11 +35,11 @@ map("n", "m", "<CMD>nohl<CR>", { noremap = true })
 
 -- Alt+w closes a window
 map({"n", "i", "v"}, "<M-w>", "<CMD>quit<CR>", { noremap = true })
--- Alt+{h,j,k,l} moves to window.
-map({"n", "i", "v"}, "<M-h>", "<CMD>wincmd 1 h<CR>", { noremap = true })
-map({"n", "i", "v"}, "<M-j>", "<CMD>wincmd 1 j<CR>", { noremap = true })
-map({"n", "i", "v"}, "<M-k>", "<CMD>wincmd 1 k<CR>", { noremap = true })
-map({"n", "i", "v"}, "<M-l>", "<CMD>wincmd 1 l<CR>", { noremap = true })
+-- Alt+{h,j,k,l} moves to window. (Handling this with vim-tmux plugin now)
+-- map({"n", "i", "v"}, "<M-h>", "<CMD>wincmd 1 h<CR>", { noremap = true })
+-- map({"n", "i", "v"}, "<M-j>", "<CMD>wincmd 1 j<CR>", { noremap = true })
+-- map({"n", "i", "v"}, "<M-k>", "<CMD>wincmd 1 k<CR>", { noremap = true })
+-- map({"n", "i", "v"}, "<M-l>", "<CMD>wincmd 1 l<CR>", { noremap = true })
 
 -- Ctrl+Alt+{h,j,k,l} resizes window .
 map({"n", "i", "v"}, "<C-M-h>", "<CMD>vertical resize -1<CR>", { noremap = true })
