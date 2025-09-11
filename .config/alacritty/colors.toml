@@ -1,37 +1,75 @@
-# base16 Tokyodark - alacritty color config
-# Jamy Golden (https://github.com/JamyGolden), Based on Tokyodark.nvim (https://github.com/tiagovla/tokyodark.nvim)
+# Colors section of "Alacritty - TOML configuration file format"
+# https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd#colors
 
-[colors]
-draw_bold_text_with_bright_colors = false
-
-# Default colors
 [colors.primary]
-background = '0x11121d'
-foreground = '0xa0a8cd'
+foreground = "#e0def4"
+background = "#191724"
+dim_foreground = "#908caa"
+bright_foreground = "#e0def4"
 
-# Colors the cursor will use if `custom_cursor_colors` is true
 [colors.cursor]
-text = '0x11121d'
-cursor = '0xa0a8cd'
+text = "#e0def4"
+cursor = "#524f67"
 
-# Normal colors
+[colors.vi_mode_cursor]
+text = "#e0def4"
+cursor = "#524f67"
+
+[colors.search.matches]
+foreground = "#908caa"
+background = "#26233a"
+
+[colors.search.focused_match]
+foreground = "#191724"
+background = "#ebbcba"
+
+[colors.hints.start]
+foreground = "#908caa"
+background = "#1f1d2e"
+
+[colors.hints.end]
+foreground = "#6e6a86"
+background = "#1f1d2e"
+
+[colors.line_indicator]
+foreground = "None"
+background = "None"
+
+[colors.footer_bar]
+foreground = "#e0def4"
+background = "#1f1d2e"
+
+[colors.selection]
+text = "#e0def4"
+background = "#403d52"
+
 [colors.normal]
-black = '0x11121d'
-red = '0xee6d85'
-green = '0x95c561'
-yellow = '0xd7a65f'
-blue = '0x7199ee'
-magenta = '0xa485dd'
-cyan = '0x9fbbf3'
-white = '0xa0a8cd'
+black = "#26233a"
+red = "#eb6f92"
+green = "#31748f"
+yellow = "#f6c177"
+blue = "#9ccfd8"
+magenta = "#c4a7e7"
+cyan = "#ebbcba"
+white = "#e0def4"
 
-# Bright colors
 [colors.bright]
-black = '0x212234'
-red = '0xf6955b'
-green = '0x212234'
-yellow = '0x212234'
-blue = '0x4a5057'
-magenta = '0xabb2bf'
-cyan = '0x773440'
-white = '0xbcc2dc'
+black = "#6e6a86"
+red = "#eb6f92"
+green = "#31748f"
+yellow = "#f6c177"
+blue = "#9ccfd8"
+magenta = "#c4a7e7"
+cyan = "#ebbcba"
+white = "#e0def4"
+
+[colors.dim]
+black = "#6e6a86"
+red = "#eb6f92"
+green = "#31748f"
+yellow = "#f6c177"
+blue = "#9ccfd8"
+magenta = "#c4a7e7"
+cyan = "#ebbcba"
+white = "#e0def4"
+

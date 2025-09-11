@@ -33,6 +33,11 @@ local map = vim.keymap.set
 
 map("n", "m", "<CMD>nohl<CR>", { noremap = true })
 
+map({"n", "v"}, "<leader>p", "\"_dP", {
+  noremap = true,
+  desc = "Paste without overwriting paste buffer."
+})
+
 -- Alt+w closes a window
 map({"n", "i", "v"}, "<M-w>", "<CMD>quit<CR>", { noremap = true })
 -- Alt+{h,j,k,l} moves to window. (Handling this with vim-tmux plugin now)

@@ -1,4 +1,4 @@
-@import url("colors.css");
+@import url("rose-pine.css");
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
@@ -8,10 +8,10 @@
 }
 
 window#waybar {
-    background-color: shade(@base01, 0.9);
+    background-color: shade(@base, 0.9);
     border-bottom: 0px;
     border-radius: 0;
-    color: @base05;
+    color: @text;
     transition-property: background-color;
     transition-duration: 0.0s;
 }
@@ -22,18 +22,13 @@ window#waybar.hidden {
 
 window#waybar.empty {
 }
-/*
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
 
 window#waybar.termite {
-    background-color: @base02;
+    background-color: @surface;
 }
 
 window#waybar.chromium {
-    background-color: @base00;
+    background-color: @base;
     border: none;
 }
 
@@ -54,21 +49,21 @@ button:hover {
 #workspaces button {
     padding: 0 6px;
     background-color: transparent;
-    color: @base05;
+    color: @text;
 }
 
 #workspaces button.visible {
-    background: @base07;
-    color: @base00;
+    background: @iris;
+    color: @base;
 }
 
 #workspaces button:hover {
-    background: @base04;
-    color: @base05;
+    background: @foam;
+    color: @base;
 }
 
 #workspaces button.urgent {
-    background-color: @base08;
+    background-color: @love;
 }
 
 #clock,
@@ -81,18 +76,18 @@ button:hover {
     /* border-radius: 7px 7px 12px 12px; */
     /* box-shadow: inset 2px -3px alpha(@crust, 0.2); */
     background-color: transparent;
-    color: @base05;
+    color: @text;
 }
 @keyframes blink {
     to {
-        background-color: @base05;
-        color: @base00;
+        background-color: @text;
+        color: @base;
     }
 }
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: @base08;
-    color: @base05;
+    background-color: @love;
+    color: @text;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -100,22 +95,22 @@ button:hover {
     animation-direction: alternate;
 }
 label:focus {
-    background-color: @base00;
+    background-color: @base;
 }
 #network {
 }
 #network.disconnected {
-    background-color: @base08;
+    background-color: @love;
 }
 #tray {
-    background-color: @base04;
+    background-color: @pine;
 }
 #tray > .passive {
     -gtk-icon-effect: dim;
 }
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: @base08;
+    background-color: @love;
 }
 
 #pulseaudio-slider slider {
@@ -126,20 +121,20 @@ label:focus {
     background-image: none;
     border: none;
     box-shadow: none;
-    background-color: @base04;
+    background-color: @pine;
 }
 #pulseaudio-slider trough {
     min-height: 8px;
     min-width: 80px;
     border-radius: 5px;
-    background-color: @base04;
+    background-color: @pine;
 }
 #pulseaudio-slider highlight {
     min-width: 5px;
     border-radius: 5px;
-    border-color: @base04;
-    background-color: @base04;
+    border-color: @pine;
+    background-color: @pine;
 }
 #pulseaudio-slider:hover slider {
-    background-color: @base04;
+    background-color: @pine;
 }

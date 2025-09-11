@@ -10,7 +10,6 @@
     "modules-left": [
         "hyprland/workspaces",
         "hyprland/window"
-        // "custom/media"
     ],
     "modules-center": [
         "mpris"
@@ -21,7 +20,6 @@
         "battery",
         "battery#bat2",
         "clock",
-        "tray"
     ],
     "hyprland/workspaces": {
       "format": "  {name}<big>│</big>{windows} ",
@@ -30,7 +28,7 @@
       "warp-on-scroll": "false",
 
       "window-rewrite": {
-        "class<firefox>": " ",
+        "class<firefox(.*)>": " ",
         "class<org.pwmt.zathura>": " ",
         "class<sioyek>": " ",
         "class<libreoffice-(.*)>": " ",
@@ -55,10 +53,6 @@
     "hyprland/window": {
       "separate-outputs": true,
       "format": "  <big>{initialClass}</big>"
-    },
-    "tray": {
-      "icon-size": 28,
-      "spacing": 10
     },
     "clock": {
       "format": "{:%H:%M     %Y/%m/%d}",
